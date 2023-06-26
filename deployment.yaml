@@ -6,7 +6,7 @@ metadata:
     app: flaskdemo
   name: flaskdemo
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: flaskdemo
@@ -26,9 +26,9 @@ status: {}
 apiVersion: v1
 kind: Service
 metadata:
-  name: lb-service
+  name: flaskdemo
   labels:
-    app: lb-service
+    app: flaskdemo
 spec:
   type: LoadBalancer
   ports:
