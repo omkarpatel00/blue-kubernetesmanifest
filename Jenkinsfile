@@ -1,6 +1,11 @@
 node {
     def app
 
+    // Define DOCKERTAG as an environment variable
+    environment {
+        DOCKERTAG = "${env.BUILD_NUMBER}"
+    }
+
     stage('Clone repository') {
         checkout scm
     }
